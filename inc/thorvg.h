@@ -51,11 +51,28 @@ class Canvas;
 
 /**
  * @defgroup ThorVG C++ APIs
+ * @brief ThorVG provides C++ interface.
  */
 
 /**@{*/
+/**
+ * @defgroup ThorVG_Initializer Initializer
+ *
+ * @defgroup ThorVG_Canvas Canvas
+ *
+ * @defgroup ThorVG_Paint Paint
+ *
+ * @defgroup ThorVG_Gradient Gradient
+ *
+ * @defgroup ThorVG_Shape Shape
+ *
+ * @defgroup ThorVG_Scene Scene
+ *
+ * @defgroup ThorVG_Picture Picture
+ */
 
 /**
+ * @enum Result
  * @brief Enumeration specifying the result from the APIs.
  */
 enum class TVG_EXPORT Result
@@ -70,6 +87,9 @@ enum class TVG_EXPORT Result
 };
 
 /**
+ * @addtogroup ThorVG_Shape
+ * @{
+ * @enum PathCommand
  * @brief Enumeration specifying the values of the path commands accepted by ThorVG.
  *
  * Not to be confused with the path commands from the svg path element (like M, L, Q, H and many others).
@@ -82,8 +102,12 @@ enum class TVG_EXPORT PathCommand
     LineTo,    ///< Draws a line from the current point to the given point and sets a new value of the current point - corresponds to L command in the svg path commands.
     CubicTo    ///< Draws a cubic Bezier curve from the current point to the given point using two given control points and sets a new value of the current point - corresponds to C command in the svg path commands.
 };
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Shape
+ * @{
+ * @enum StrokeCap
  * @brief Enumeration determining the ending type of a stroke in the open sub-paths.
  */
 enum class TVG_EXPORT StrokeCap
@@ -92,8 +116,12 @@ enum class TVG_EXPORT StrokeCap
     Round,      ///< The stroke is extended in both endpoints of a sub-path by a half circle, with a radius equal to the half of a stroke width. For zero length sub-paths a full circle is rendered.
     Butt        ///< The stroke ends exactly at each of the two endpoints of a sub-path. For zero length sub-paths no stroke is rendered.
 };
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Shape
+ * @{
+ * @enum StrokeJoin
  * @brief Enumeration determining the style used at the corners of joined stroked path segments.
  */
 enum class TVG_EXPORT StrokeJoin
@@ -102,8 +130,12 @@ enum class TVG_EXPORT StrokeJoin
     Round,     ///< The outer corner of the joined path segments is rounded. The circular region is centered at the join point.
     Miter      ///< The outer corner of the joined path segments is spiked. The spike is created by extension beyond the join point of the outer edges of the stroke until they intersect. In case the extension goes beyond the limit, the join style is converted to the Bevel style.
 };
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Gradient
+ * @{
+ * @enum FillSpread
  * @brief Enumeration specifying how to fill the area outside the gradient bounds.
  */
 enum class TVG_EXPORT FillSpread
@@ -112,8 +144,12 @@ enum class TVG_EXPORT FillSpread
     Reflect, ///< The gradient pattern is reflected outside the gradient area until the expected region is filled.
     Repeat   ///< The gradient pattern is repeated continuously beyond the gradient area until the expected region is filled.
 };
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Shape
+ * @{
+ * @enum FillRule
  * @brief Enumeration specifying the algorithm used to establish which parts of the shape are treated as the inside of the shape.
  */
 enum class TVG_EXPORT FillRule
@@ -121,8 +157,12 @@ enum class TVG_EXPORT FillRule
     Winding = 0, ///< A line from the point to a location outside the shape is drawn. The intersections of the line with the path segment of the shape are counted. Starting from zero, if the path segment of the shape crosses the line clockwise, one is added, otherwise one is subtracted. If the resulting sum is non zero, the point is inside the shape.
     EvenOdd      ///< A line from the point to a location outside the shape is drawn and its intersections with the path segments of the shape are counted. If the number of intersections is an odd number, the point is inside the shape.
 };
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Paint
+ * @{
+ * @enum CompositeMethod
  * @brief Enumeration indicating the method used in the composition of two objects - the target and the source.
  */
 enum class TVG_EXPORT CompositeMethod
@@ -132,8 +172,12 @@ enum class TVG_EXPORT CompositeMethod
     AlphaMask,    ///< The pixels of the source and the target are alpha blended. As a result, only the part of the source, which intersects with the target is visible.
     InvAlphaMask  ///< The pixels of the source and the complement to the target's pixels are alpha blended. As a result, only the part of the source which is not covered by the target is visible.
 };
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Canvas
+ * @{
+ * @enum CanvasEngine
  * @brief Enumeration specifying the engine type used for the graphic rendering.
  */
 enum class TVG_EXPORT CanvasEngine
@@ -141,6 +185,7 @@ enum class TVG_EXPORT CanvasEngine
     Sw = (1 << 1), ///< CPU rendering.
     Gl = (1 << 2)  ///< OpenGL rendering.
 };
+/** @}*/
 
 
 /**
@@ -164,6 +209,9 @@ struct Matrix
 
 
 /**
+ * @addtogroup ThorVG_Paint
+ * @{
+ *
  * @class Paint
  *
  * @brief A class for managing graphic elements.
@@ -262,9 +310,13 @@ public:
     _TVG_DECLARE_ACCESSOR();
     _TVG_DECLARE_PRIVATE(Paint);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Gradient
+ * @{
+ *
  * @class Fill
  *
  * @brief A class representing the gradient fill of the Shape object.
@@ -329,9 +381,13 @@ public:
     _TVG_DECALRE_IDENTIFIER();
     _TVG_DECLARE_PRIVATE(Fill);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Canvas
+ * @{
+ *
  * @class Canvas
  *
  * @brief A class for drawing graphic elements.
@@ -406,9 +462,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(Canvas);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Gradient
+ * @{
+ *
  * @class LinearGradient
  *
  * @brief A class representing the linear gradient fill of the Shape object.
@@ -459,9 +519,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(LinearGradient);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Gradient
+ * @{
+ *
  * @class RadialGradient
  *
  * @brief A class representing the radial gradient fill of the Shape object.
@@ -506,9 +570,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(RadialGradient);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Shape
+ * @{
+ *
  * @class Shape
  *
  * @brief A class representing two-dimensional figures and their properties.
@@ -841,9 +909,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(Shape);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Picture
+ * @{
+ *
  * @class Picture
  *
  * @brief A class representing an image read in one of the supported formats: svg, png and raw.
@@ -954,9 +1026,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(Picture);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Scene
+ * @{
+ *
  * @class Scene
  *
  * @brief A class enabling to hold many Paint objects.
@@ -1008,9 +1084,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(Scene);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Canvas
+ * @{
+ *
  * @class SwCanvas
  *
  * @brief A class for the rasterisation of graphic elements with a software engine.
@@ -1055,9 +1135,13 @@ public:
 
     _TVG_DECLARE_PRIVATE(SwCanvas);
 };
+/** @}*/
 
 
 /**
+ * @addtogroup ThorVG_Canvas
+ * @{
+ *
  * @class GlCanvas
  *
  * @brief A class for the rasterisation of graphic elements with the OpenGL engine.
@@ -1082,9 +1166,12 @@ public:
 
     _TVG_DECLARE_PRIVATE(GlCanvas);
 };
-
+/** @}*/
 
 /**
+ * @addtogroup ThorVG_Initializer
+ * @{
+ *
  * @class Initializer
  *
  * @brief A class that enables initialization and termination of the ThorVG engine.
@@ -1118,6 +1205,7 @@ public:
 
     _TVG_DISABLE_CTOR(Initializer);
 };
+/** @}*/
 
 /** @}*/
 
