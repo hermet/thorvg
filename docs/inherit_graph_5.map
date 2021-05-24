@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtvg_1_1_paint.html" title="A abstract class for managing graphical elements. " alt="" coords="5,56,84,83"/>
+<area shape="rect" id="node2" href="$classtvg_1_1_picture.html" title="A class representing an image read in one of the supported formats: raw, svg, png and etc..." alt="" coords="132,5,221,32"/>
+<area shape="rect" id="node3" href="$classtvg_1_1_scene.html" title="A class to composite children paints. " alt="" coords="134,56,219,83"/>
+<area shape="rect" id="node4" href="$classtvg_1_1_shape.html" title="A class representing two&#45;dimensional figures and their properties. " alt="" coords="134,107,219,133"/>
+</map>

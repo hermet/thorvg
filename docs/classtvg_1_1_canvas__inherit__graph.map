@@ -1,0 +1,4 @@
+<map id="tvg::Canvas" name="tvg::Canvas">
+<area shape="rect" id="node2" href="$classtvg_1_1_gl_canvas.html" title="A class for the rendering graphic elements with a GL raster engine. " alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node3" href="$classtvg_1_1_sw_canvas.html" title="A class for the rendering graphic elements with a software raster engine. " alt="" coords="136,80,248,107"/>
+</map>
