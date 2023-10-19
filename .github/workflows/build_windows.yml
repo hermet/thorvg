@@ -8,6 +8,14 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
+
 jobs:
   build:
     runs-on: windows-latest
@@ -71,3 +79,10 @@ jobs:
       with:
         name: UnitTestReport
         path: build/meson-logs/testlog.txt
+
+  tmate:
+    runs-on: ubuntu-latest
+    steps:    
+    - name: Setup tmate session
+    - uses: mxschmitt/action-tmate@v3
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
