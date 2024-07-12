@@ -5,11 +5,11 @@
 ![BinarySize](https://img.shields.io/badge/Size->150kb-blue)
 [![CodeFactor](https://www.codefactor.io/repository/github/hermet/thorvg/badge)](https://www.codefactor.io/repository/github/hermet/thorvg)
 <br>
-[![Build Ubuntu](https://github.com/thorvg/hermet/actions/workflows/build_ubuntu.yml/badge.svg?branch=main&event=push)](https://github.com/thorvg/hermet/actions/workflows/build_ubuntu.yml)
-[![Build Windows](https://github.com/thorvg/hermet/actions/workflows/build_windows.yml/badge.svg?branch=main&event=push)](https://github.com/thorvg/hermet/actions/workflows/build_windows.yml)
-[![Build macOS](https://github.com/thorvg/hermet/actions/workflows/build_macos.yml/badge.svg?branch=main&event=push)](https://github.com/thorvg/hermet/actions/workflows/build_macos.yml)
-[![Build iOS](https://github.com/thorvg/hermet/actions/workflows/build_ios.yml/badge.svg?branch=main&event=push)](https://github.com/thorvg/hermet/actions/workflows/build_ios.yml)
-[![Build Android](https://github.com/thorvg/hermet/actions/workflows/build_android.yml/badge.svg?branch=main&event=push)](https://github.com/thorvg/hermet/actions/workflows/build_android.yml)
+[![Build Ubuntu](https://github.com/hermet/thorvg/actions/workflows/build_ubuntu.yml/badge.svg?branch=main&event=push)](https://github.com/hermet/thorvg/actions/workflows/build_ubuntu.yml)
+[![Build Windows](https://github.com/hermet/thorvg/actions/workflows/build_windows.yml/badge.svg?branch=main&event=push)](https://github.com/hermet/thorvg/actions/workflows/build_windows.yml)
+[![Build macOS](https://github.com/hermet/thorvg/actions/workflows/build_macos.yml/badge.svg?branch=main&event=push)](https://github.com/hermet/thorvg/actions/workflows/build_macos.yml)
+[![Build iOS](https://github.com/hermet/thorvg/actions/workflows/build_ios.yml/badge.svg?branch=main&event=push)](https://github.com/hermet/thorvg/actions/workflows/build_ios.yml)
+[![Build Android](https://github.com/hermet/thorvg/actions/workflows/build_android.yml/badge.svg?branch=main&event=push)](https://github.com/hermet/thorvg/actions/workflows/build_android.yml)
 
 
 # ThorVG
