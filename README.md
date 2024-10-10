@@ -358,7 +358,7 @@ As TVG Saver facilitates the export of the scene-tree into TVG Picture data file
 ### Canva iOS
 [Canva](https://www.canva.com), a leading visual communication platform, is a household name among creators, marketers, designers, students, and more, with millions of users worldwide. It empowers users to create stunning visual content with a user-friendly interface and a vast library of templates and design elements. The Canva iOS app transitioned from the existing Lottie animation engine to ThorVG for Lottie animations, resulting in approximately an 80% improvement in rendering speed and a 70% reduction in peak memory usage.
 <p align="center">
-  <img width="800" height="auto" src="https://github.com/thorvg/thorvg/blob/main/res/example_canvaios.png">
+  <img width="800" height="auto" src="https://github.com/thorvg/hermet/blob/main/res/example_canvaios.png">
 </p>
 
 ### dotLottie
@@ -371,7 +371,7 @@ As TVG Saver facilitates the export of the scene-tree into TVG Picture data file
 [Flux Audio](https://www.flux.audio/) is a cutting-edge audio technology company specializing in high-fidelity sound systems and immersive audio experiences. With a focus on delivering precision and quality, Flux Audio leverages advanced software solutions to enhance audio processing across a wide range of devices. ThorVG is integrated into Flux Audio’s user interface, providing efficient and scalable vector rendering for their visual elements, ensuring a sleek and responsive user experience. This collaboration highlights ThorVG’s versatility in high-performance audio platforms.
 
 <p align="center">
-  <img width="800" height="auto" src="https://github.com/thorvg/thorvg/blob/main/res/example_flux.jpg">
+  <img width="800" height="auto" src="https://github.com/thorvg/hermet/blob/main/res/example_flux.jpg">
 </p>
 
 ### Godot
