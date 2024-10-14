@@ -55,13 +55,13 @@ The task scheduler has been meticulously crafted to conceal complexity, streamli
 ThorVG is currently under development and is expanding its support for essential platforms as needed. The major platforms that ThorVG can be directly integrated with at present include the following: <br />
 <br />
 <p align="center">
-  <img width="500" height="auto" src="https://github.com/hermet/thorvg/blob/main/res/example_platforms.png">
+  <img width="600" height="auto" src="https://github.com/hermet/thorvg/blob/main/res/example_platforms.png">
 </p>
 
 - Ubuntu
 - MacOS
 - Windows
--Tizen
+- Tizen
 - iOS
 - Android
 - Web
